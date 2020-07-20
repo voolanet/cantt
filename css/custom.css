@@ -1,0 +1,141 @@
+/* Text Elements */
+
+span.text-element.label {
+  margin-bottom: 3px;
+  padding-top: .335rem;
+  padding-bottom: .35rem;
+  background-color: #9496a0;
+  color: #fff;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-size: 15px;
+  font-family: 'Arapey', cursive;
+}
+
+span.text-element.form-error {
+  color: #6079ff;
+  font-family: 'Roboto', cursive;
+}
+
+span.text-element {
+  color: #333;
+  font-size: 12px;
+  font-family: 'Roboto', Arial, 'Helvetica Neue', Helvetica, sans-serif;
+}
+
+/* Interaction Elements */
+
+form.form-container.my-form {
+  display: grid;
+  margin-right: auto;
+  margin-left: auto;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  min-height: 100px;
+  max-width: 600px;
+}
+
+input[type=text] {
+  border-color: #4f4f4f;
+  box-shadow: rgba(10, 10, 10, .05) 0 1px 4px 0 inset;
+  color: #333;
+  font-size: 15px;
+  font-family: 'Lato', cursive;
+}
+
+input[type=text]:focus {
+  box-shadow: rgba(139, 162, 198, .4) 0 0 8px 0;
+}
+
+input[type=email] {
+  border-color: #4f4f4f;
+  box-shadow: rgba(10, 10, 10, .05) 0 1px 4px 0 inset;
+  color: #333;
+  font-size: 15px;
+  font-family: 'Lato', cursive;
+}
+
+input[type=email]:focus {
+  box-shadow: rgba(139, 162, 198, .4) 0 0 8px 0;
+}
+
+label.label-container {
+  padding-bottom: 8px;
+}
+
+button.button {
+  background-color: #6079ff;
+  font-family: 'Karla', cursive;
+}
+
+button.submit-btn {
+  padding: 14px 16px;
+  min-height: 50px;
+  border-radius: 4px;
+  background-color: #2b262c;
+  box-shadow: rgba(0, 0, 0, .2) 0 0 4px 1px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-size: 16px;
+  font-family: 'Karla', Arial, 'Helvetica Neue', Helvetica, sans-serif;
+}
+
+button.button.submit-btn {
+  -webkit-transition-delay: .1s;
+     -moz-transition-delay: .1s;
+       -o-transition-delay: .1s;
+          transition-delay: .1s;
+  -webkit-transition-duration: .3s;
+     -moz-transition-duration: .3s;
+       -o-transition-duration: .3s;
+          transition-duration: .3s;
+}
+
+button.button.submit-btn:hover {
+  background-color: #000;
+}
+
+@media screen and (min-width: 40rem) {
+  /* Interaction Elements */
+
+  form.form-container.my-form {
+    max-width: 800px;
+
+    grid-template-columns: repeat(2 , 1fr);
+    grid-template-rows: repeat(2 , auto);
+    grid-column-gap: 20px;
+  }
+
+  input[type=text] {
+    min-height: 50px;
+  }
+
+  input[type=email] {
+    min-height: 50px;
+  }
+
+  button.submit-btn {
+    -webkit-align-self: flex-end;
+    -ms-flex-item-align: end;
+            align-self: flex-end;
+  }
+
+  label.label-container {
+    padding-bottom: 0;
+  }
+}
+
+@media screen and (min-width: 64rem) {
+  /* Interaction Elements */
+
+  form.form-container.my-form {
+    max-width: 1200px;
+
+    grid-template-columns: repeat(3 , 1fr);
+    grid-template-rows: repeat(2 , auto);
+  }
+
+  button.submit-btn {
+    grid-area: auto / auto / auto /4;
+  }
+}
